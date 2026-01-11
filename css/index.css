@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'Zoho Puvi';
+    src: url('../fonts/ZohoPuvi-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+:root {
+    --white: #FFFFFF;
+    --green-dark: #03321C;
+    --beige: #F3ECE0;
+    --purple: #110332;
+    --red-cta: #E32B2B;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zoho Puvi', Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+.brand-box {
+    background: var(--white);
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.logo-img {
+    height: 30px;
+}
+
+.divider {
+    width: 1px;
+    height: 25px;
+    background: #ddd;
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    padding-top: 30vh;
+}
+
+.hero-text h1 {
+    font-size: 44px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-red {
+    background: var(--red-cta);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-img {
+    width: 100%;
+    max-width: 520px;
+    height: 94vh;
+
+}
+
+.cards-section {
+    background-color: var(--white);
+    padding: 16px;
+}
+
+.section-title {
+    font-size: 28px;
+    padding: 24px;
+    text-align: center;
+}
+
+.section-title.white {
+    color: var(--white);
+    padding: 0 36px;
+    display: flex;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px;
+}
+
+.content-item {
+    padding: 40px;
+    text-align: left;
+}
+
+.card-beige {
+    background-color: var(--beige);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-green {
+    background-color: var(--green-dark);
+    color: white;
+}
+
+.card-purple {
+    background-color: var(--purple);
+    color: white;
+}
+
+.icon-img-hand {
+    height: 60px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.check-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.check-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.faq-section {
+    background: var(--black);
+    color: white;
+    padding: 50px;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    color:--var(--white);
+}
+
+.content-item.active .accordion-content {
+    max-height: 400px;
+    padding: 25px 0;
+}
+
+.footer-section {
+    background-color: var(--green-dark);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer-brand {
+    margin-bottom: 50px;
+}
+
+.footer-section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+@media (min-width: 768px) {
+    .hero-flex {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+
+
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-beige {
+        grid-column: span 2;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-beige .card-text {
+        max-width: 600px;
+    }
+
+    .icon-img-hand {
+        height: 100px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-flex {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .main-img {
+        height: 94vh;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .container-hand {
+        padding: 24px;
+    }
+
+    .hero-text h1 {
+        padding: 24px;
+    }
+}
